@@ -170,6 +170,11 @@ void excluirPrimeiroElemento()
 		cout << "Lista vazia \n";
 		return;
 	}
+	else if (primeiro == ultimo) {
+		ultimo = NULL;
+		primeiro = NULL;
+		cout << "Elemento excluido\n";
+	}
 	else {
 		NO* aux = primeiro;
 		primeiro = primeiro->prox;
@@ -185,7 +190,12 @@ void excluirUltimoElemento()
 		cout << "Lista vazia \n";
 		return;
 	}
-	else {
+	else if (primeiro == ultimo) {
+		ultimo = NULL;
+		primeiro = NULL;
+		cout << "Elemento excluido\n";
+	}
+	else{
 		NO* aux = ultimo;
 		ultimo = ultimo->ant;
 		ultimo->prox = NULL;
